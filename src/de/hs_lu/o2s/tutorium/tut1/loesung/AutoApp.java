@@ -1,5 +1,8 @@
 package de.hs_lu.o2s.tutorium.tut1.loesung;
 
+import de.hs_lu.o2s.tutorium.tut1.loesung.Auto;
+import de.hs_lu.o2s.tutorium.tut1.loesung.Person;
+
 public class AutoApp {
 
 	public static void main(String[] args) {

@@ -1,7 +1,15 @@
 package de.hs_lu.o2s.tutorium.tut4.loesung;
 
-public class AppAutragsliste {
+import de.hs_lu.o2s.tutorium.tut4.uebung.Auftrag;
 
+public class AppAutragsliste {
+/**
+ * Auftrag.auftragsPauschale --> Statische Variablen werden mit dem Klassennamen angesprochen.
+ *
+ * @param args
+ */
+	
+	
 	public static void main(String[] args) {
 		Fahrzeug f1 = new PKW("Audi", "A4", "WAUZZZ8D", new Person("Peter", "Stöger"));
 		Fahrzeug f2 = new PKW("Audi", "A3", "MANSU2KS", new Person("Peter", "Stöger"));

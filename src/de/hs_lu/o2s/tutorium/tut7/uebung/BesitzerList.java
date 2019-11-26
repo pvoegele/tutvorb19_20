@@ -12,4 +12,5 @@ public class BesitzerList extends ArrayList {
 		return (o instanceof Person && ((Person) o).isFahrberechtigt() && !this.contains(o));
 	}
 
+	
 }

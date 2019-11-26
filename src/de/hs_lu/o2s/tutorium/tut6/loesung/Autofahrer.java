@@ -1,4 +1,4 @@
-package de.hs_lu.o2s.tutorium.tut6.uebung;
+package de.hs_lu.o2s.tutorium.tut6.loesung;
 
 public class Autofahrer extends Person {
 
@@ -24,11 +24,27 @@ public class Autofahrer extends Person {
 		this.setGeburtsjahr(geburtsjahr);
 	}
 
+	public boolean darfFuehrerscheinMachen() {
+		try {
+			if (this.getGeburtsjahr() > 2001) {
+				System.out.println("Ich darf den Führerschein machen!");
+				return true;
+			} else
+				throw new NichtAltGenugException("Ich bin einfach noch zu jung.");
+
+		} catch (NichtAltGenugException e) {
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+
 	public boolean isAltGenugUmZuFahren() {
 		return AltGenugUmZuFahren;
 	}
 
-	public void setAltGenugUmZuFahren(boolean altGenug) {
-		this.AltGenugUmZuFahren = altGenug;
+	public void setAltGenugUmZuFahren() {
+		if (this.darfFuehrerscheinMachen()) {
+			this.AltGenugUmZuFahren = true;
+		}
 	}
 }

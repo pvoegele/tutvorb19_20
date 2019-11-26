@@ -1,4 +1,4 @@
-package de.hs_lu.o2s.tutorium.tut6.uebung;
+package de.hs_lu.o2s.tutorium.tut6.loesung;
 
 public class Auto {
 
@@ -15,7 +15,16 @@ public class Auto {
 	}
 
 	public void setFahrer(Autofahrer fahrer) {
-		this.fahrer = fahrer;
+		try {
+			if (this.fahrer.hasFuehrerschein()) {
+				this.fahrer = fahrer;
+			} else
+				throw new KeinFuehrerscheinException(fahrer.getName() + " kann nicht gesetzt werden, weil er keinen Führerschein hat.");
+
+		} catch (KeinFuehrerscheinException kfex) {
+			// TODO: handle exception
+			System.out.println(kfex.getMessage());
+		}
 
 	}
 
@@ -59,11 +68,12 @@ public class Auto {
 		this.kilometerstand = kilometerstand;
 	}
 
-	public void autoFahren(int zurueckgelegteKilometer) {
-		if (this.getFahrer().hasFuehrerschein()) {
-			this.setKilometerstand(this.getKilometerstand() + zurueckgelegteKilometer);
-		}
-
+	public void autoFahren(int zurueckgelegteKilometer) throws KeinFuehrerscheinException {
+		if(this.getFahrer().hasFuehrerschein()) {
+			this.setKilometerstand(this.getKilometerstand()+zurueckgelegteKilometer);
+		} else throw new KeinFuehrerscheinException(this.getFahrer().getName() + " hat momentan keinen Führerschein!");
+		
+		
 	}
 
 }

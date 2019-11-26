@@ -1,5 +1,7 @@
 package de.hs_lu.o2s.tutorium.tut2.loesung;
 
+import java.nio.channels.MembershipKey;
+
 public class Autoliste {
 
 	Auto[] autoA;
@@ -49,7 +51,7 @@ public class Autoliste {
 	 * aufgerufen.
 	 * 
 	 */
-	public Auto deleteLastAuto() {
+	public void deleteLastAuto() {
 		Auto[] copyAutoA = new Auto[this.getAutoA().length - 1];
 		Auto merkerAuto = this.getAutoA()[this.getAutoA().length - 1];
 		
@@ -62,9 +64,9 @@ public class Autoliste {
 		*/
 		
 		System.arraycopy(this.getAutoA(), 0, copyAutoA, 0, copyAutoA.length);
-		
+		this.PrintDeletedAuto(merkerAuto);
 		this.setAutoA(copyAutoA);
-		return merkerAuto;
+		
 	}
 
 	/**

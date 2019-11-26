@@ -12,7 +12,6 @@ public class AppAuto {
 		System.out.println(aL1);
 		System.out.println(
 				"--------------------------------Ausgabe Auto welches gelöscht wurde---------------------------------------");
-		aL1.PrintDeletedAuto(aL1.deleteLastAuto());
 		System.out.println(
 				"--------------------------------Ausgabe der Autoliste nach Delete---------------------------------------");
 		System.out.println(aL1);

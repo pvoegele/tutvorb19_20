@@ -1,4 +1,4 @@
-package de.hs_lu.o2s.tutorium.tut6.uebung;
+package de.hs_lu.o2s.tutorium.tut6.loesung;
 
 class KeinFuehrerscheinException extends Exception {
 

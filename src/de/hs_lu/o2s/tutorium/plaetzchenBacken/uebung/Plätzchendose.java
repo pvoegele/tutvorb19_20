@@ -15,6 +15,8 @@ public class Plätzchendose extends HashSet {
 		System.out.println("Wir können backen! Yey, es ist noch Platz!");
 		return true;
 
+		
+		
 	}
 
 	public int wieVielPlatzNoch() {

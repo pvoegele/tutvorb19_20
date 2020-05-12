@@ -26,7 +26,7 @@ public class Person {
 	}
 	
 	public String toString() {
-		return this.getNachname()+", "+this.getVorname();
+		return this.getClass().getSimpleName() +": "+ this.getNachname()+", "+this.getVorname();
 	}
 	
 }

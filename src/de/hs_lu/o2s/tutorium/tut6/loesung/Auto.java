@@ -19,7 +19,8 @@ public class Auto {
 			if (this.fahrer.hasFuehrerschein()) {
 				this.fahrer = fahrer;
 			} else
-				throw new KeinFuehrerscheinException(fahrer.getName() + " kann nicht gesetzt werden, weil er keinen Führerschein hat.");
+				throw new KeinFuehrerscheinException(
+						fahrer.getName() + " kann nicht gesetzt werden, weil er keinen Führerschein hat.");
 
 		} catch (KeinFuehrerscheinException kfex) {
 			// TODO: handle exception
@@ -69,11 +70,11 @@ public class Auto {
 	}
 
 	public void autoFahren(int zurueckgelegteKilometer) throws KeinFuehrerscheinException {
-		if(this.getFahrer().hasFuehrerschein()) {
-			this.setKilometerstand(this.getKilometerstand()+zurueckgelegteKilometer);
-		} else throw new KeinFuehrerscheinException(this.getFahrer().getName() + " hat momentan keinen Führerschein!");
-		
-		
+		if (this.getFahrer().hasFuehrerschein()) {
+			this.setKilometerstand(this.getKilometerstand() + zurueckgelegteKilometer);
+		} else
+			throw new KeinFuehrerscheinException(this.getFahrer().getName() + " hat momentan keinen Führerschein!");
+
 	}
 
 }

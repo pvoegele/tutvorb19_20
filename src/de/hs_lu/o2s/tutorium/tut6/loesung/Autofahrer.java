@@ -26,7 +26,7 @@ public class Autofahrer extends Person {
 
 	public boolean darfFuehrerscheinMachen() {
 		try {
-			if (this.getGeburtsjahr() > 2001) {
+			if (this.getGeburtsjahr() < 2002) {
 				System.out.println("Ich darf den Führerschein machen!");
 				return true;
 			} else
